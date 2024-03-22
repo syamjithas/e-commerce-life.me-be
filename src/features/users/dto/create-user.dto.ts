@@ -10,7 +10,6 @@ export class CreateUserDto {
   @MinLength(6)
   password: string;
 
-  // Additional fields can be added as needed, for example:
   @IsString()
   @IsNotEmpty()
   firstName: string;
@@ -18,9 +17,4 @@ export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
   lastName: string;
-
-  // If your application has roles or permissions, you might include them like so:
-  // @IsArray()
-  // @ArrayNotEmpty()
-  // roles: string[];
 }

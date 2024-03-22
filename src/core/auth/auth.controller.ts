@@ -15,10 +15,9 @@ export class AuthController {
       return this.authService.login(user);
     } catch (error) {
       if (error instanceof UnauthorizedException) {
-        // Handle UnauthorizedException, maybe logging or custom response
         throw new UnauthorizedException('Login failed');
       }
-      throw error; // Re-throw if it's not an UnauthorizedException
+      throw error;
     }
   }
 }

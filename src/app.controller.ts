@@ -7,8 +7,8 @@ import { JwtAuthGuard } from './core/auth/guards/jwt-auth.guard';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   @Get()
-  @Roles('admin') // Use the Roles decorator to specify required roles
-  @UseGuards(JwtAuthGuard) // Make sure to authenticate the request first
+  @Roles('admin')
+  @UseGuards(JwtAuthGuard)
   getHello(): string {
     return this.appService.getHello();
   }

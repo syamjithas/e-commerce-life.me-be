@@ -6,6 +6,4 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
   constructor() {
     super();
   }
-
-  // You can extend or override methods here if needed
 }

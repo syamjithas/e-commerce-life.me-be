@@ -23,6 +23,4 @@ export class UsersService {
     const data = await this.userModel.find({ password }).exec();
     return data[0].password == passwordIn;
   }
-
-  // Implement other methods as needed
 }
